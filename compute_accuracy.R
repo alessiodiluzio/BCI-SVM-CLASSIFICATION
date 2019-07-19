@@ -24,16 +24,13 @@ compute_accuracy <- function(decision_values,test_label){
     output = rbind(output,tmp_out)
   }
   true_character <- 0
-  View(test_label)
-  print(nrow(test_label))
-  total_character <- nrow(test_label)/12
-  print(true_character)
-  print(total_character)
-  for(i in 1:nrow(decision_values)){
+  total_character <- nrow(decision_values)/12
+  for(i in 1:total_character){
     if(identical(TRUE,isTRUE(all.equal(output[12*i-11:12*i],test_label[12*i-11:12*i])))){
       true_character <- true_character + 1 
     }
   }
-  
+  #print(true_character)
+  #print(total_character)
   return(true_character/total_character)
 }

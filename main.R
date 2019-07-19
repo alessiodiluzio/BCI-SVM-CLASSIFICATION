@@ -33,7 +33,8 @@ averaged_df <- row_average(df)
 #View(cbind(c, c1))
 #averaged_df <- row_average(data_split$test_set)
 names(averaged_df)[ncol(averaged_df)] <- "Y"
-data_split <- split(averaged_df)
+data_split <- split(averaged_df,6)
 normalized_split <- normalize(data_split)
 
-cross_val_out <- cross_validation(normalized_split)
+cross_val_out <- cross_validation(normalized_split,4)
+View(cross_val_out)

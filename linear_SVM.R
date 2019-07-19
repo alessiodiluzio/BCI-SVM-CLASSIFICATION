@@ -11,7 +11,6 @@ linear_SVM <- function(TR,YTR,TS,YTS){
   #x<-table(TRUE, lapply(test_prediction$predictions, which.max))
   #x
   decision_values <- test_prediction$decisionValues
-  print(YTS)
   accuracy <- compute_accuracy(decision_values,YTS)
   #nella matrice di confusione:
   #elemento [i,j] classe predetta i classe reale j
