@@ -21,7 +21,6 @@ normalize <- function(dataset){
   })
   
   prova <- a + (data_train[1,1] - min(data_train[,1]))*(b-a)/(max(data_train[,1])-min(data_train[,1]))
-  print(prova)
   output <- list(c_train,scaled_training_set,y_train,c_test,scaled_test_set,y_test)
   names(output) <- c("C_train","scaled_training","label_train","C_test","scaled_test","label_test")
   return(output)
